@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+
+        android:orientation="vertical">
+
+
+
+        <include
+            layout="@layout/layout_title"/>
+
+        <TextView
+            android:id="@+id/loginoption_image_facebook"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP WITH FACEBOOK"
+            android:background="@drawable/fb_sign_in_btn"/>
+
+        <Button
+            android:id="@+id/loginoption_image_signup"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sign_up_with_email_btn"/>
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/line_info_pg" />
+
+        <TextView
+            android:id="@+id/loginoption_text_returningusers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/returningusers" />
+
+        <Button
+            android:id="@+id/loginoption_image_login"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/log_in_btn"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginoption_linear_terms"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/loginoption_text_signuptermstext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/signuptermstext" />
+
+        <TextView
+            android:id="@+id/loginoption_text_signuptermstext2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/signuptermstext2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/loginoption_text_signuptermstext3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="@string/signuptermstext3" />
+
+            <TextView
+                android:id="@+id/loginoption_text_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/terms" />
+
+            <TextView
+                android:id="@+id/loginoption_text_and"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/sep" />
+
+            <TextView
+                android:id="@+id/loginoption_text_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_contact_us">haloburger@rlvt.net</string>
+    <string name="email_faq_contact_us">haloburger@rlvt.net</string>
+    <string name="email_subject">Halo Burger promo code query</string>
+    <string name="email_subject_faq">Halo Burger query</string>
+    <string name="email_subject1">Halo Burger</string>
+    <string name="email_body">Halo Burger</string>
+    <string name="email_subject_fb">Halo Burger</string>
+    <string name="email_body_fb">Halo Burger</string>
+    <string name="email_subject_twt">Halo Burger</string>
+    <string name="email_body_twt">Halo Burger</string>
+    <string name="email_constant_title_message">Halo Burger</string>
+
+
+    <string name="device_type">android</string>
+    <string name="register_type">1</string>
+    <string name="register_type_fb">2</string>
+
+    <string name="pref_auth_token">authtoken</string>
+    <string name="pref_push_registration_id">registrationId</string>
+    <string name="pref_logout_button_tag">loginbuttonTag</string>
+    <string name="pref_catogroy_selected">categoryselected</string>
+    <string name="pref_login_id">prefloginid</string>
+    <string name="pref_customer_id">customer_id</string>
+    <string name="pref_phne_numb">phone_number</string>
+    <string name="pref_card_number">card_number</string>
+
+    <string name="pref_tutorial">card_number</string>
+
+</resources>

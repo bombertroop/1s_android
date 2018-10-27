@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId 'com.ak.app.haloburger.activity'
+        minSdkVersion 16
+        targetSdkVersion 16
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    flavorDimensions "relevant"
+    productFlavors {
+        trel {
+            minSdkVersion 16
+            applicationId 'com.ak.app.haloburger.activity'
+            targetSdkVersion 16
+            versionCode 20
+            versionName '2.0'
+            resValue "string", "appkey", "pxWDNVFssTj9BWZi"
+            resValue "string", "root_url", "http://one-s.herokuapp.com/api"
+            resValue "string", "base_url", "http://one-s.herokuapp.com/api"
+            resValue "string", "base_url2", "http://one-s.herokuapp.com/api"
+            resValue "string", "url_term_of_use", "http://trelevant.herokuapp.com/terms_of_use?appkey="
+            resValue "string", "url_privacy", "http://trelevant.herokuapp.com/privacy_policy?appkey="
+            resValue "string", "url_fb", "http://trelevant.herokuapp.com/url/35/facebook-halo-burger"
+            resValue "string", "url_twitter", "http://trelevant.herokuapp.com/url/35/twitter-halo-burger"
+            resValue "string", "url_instagram", "http://trelevant.herokuapp.com/url/35/instagram-halo-burger"
+            resValue "string", "url_menu_online", "http://trelevant.herokuapp.com/url/7/menu"
+            resValue "string", "url_calc_online", "http://trelevant.herokuapp.com/url/7/nutritional-calculator"
+            resValue "string", "url_faq", "https://trelevant.herokuapp.com/url/35/faq"
+            resValue "string", "ga_tracker", "UA-48084549-2"
+        }
+        live {
+            minSdkVersion 16
+            applicationId 'com.ak.app.haloburger.activity'
+            targetSdkVersion 16
+            versionCode 20
+            versionName '2.0'
+            resValue "string", "appkey", "MREFyiutsGk8o4VT"
+            resValue "string", "root_url", "http://one-s.herokuapp.com/api"
+            resValue "string", "base_url", "http://one-s.herokuapp.com/api"
+            resValue "string", "base_url2", "http://one-s.herokuapp.com/api"
+            resValue "string", "url_term_of_use", "https://app.relevantmobile.com/url/35/web-terms-of-use?appkey="
+            resValue "string", "url_privacy", "https://app.relevantmobile.com/url/35/web-privacy-policy?appkey="
+            resValue "string", "url_fb", "https://app.relevantmobile.com/url/20/facebook-halo-burger"
+            resValue "string", "url_twitter", "https://app.relevantmobile.com/url/20/twitter-halo-burger"
+            resValue "string", "url_instagram", "https://app.relevantmobile.com/url/20/instagram-halo-burger"
+            resValue "string", "url_menu_online", "https://app.relevantmobile.com/url/7/menu"
+            resValue "string", "url_calc_online", "/url/7/nutritional-calculator"
+            resValue "string", "url_faq", "https://app.relevantmobile.com/url/20/faq"
+            resValue "string", "ga_tracker", "UA-48084549-25"
+        }
+    }
+}
+
+repositories {
+    jcenter()
+    maven {
+        url "https://maven.google.com"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/gcm.jar')
+    compile 'com.android.support:appcompat-v7:26.+'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    compile 'com.android.volley:volley:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    compile 'com.google.android.gms:play-services-analytics:10.2.4'
+    implementation 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
+    implementation 'com.google.zxing:core:3.2.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.facebook.android:facebook-login:[4,5)'
+}

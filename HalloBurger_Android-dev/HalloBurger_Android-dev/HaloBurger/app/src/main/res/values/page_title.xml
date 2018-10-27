@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_main_sign_up">Welcome</string>
+    <string name="title_refer_friend">Refer a Friend</string>
+    <string name="title_promo_code"> Promo Code</string>
+    <string name="title_about_us">About us</string>
+    <string name="title_snap_start">How to Get Rewards</string>
+    <string name="title_location">Select Location</string>
+    <string name="title_login">Log In</string>
+    <string name="title_singup">Sign Up</string>
+    <string name="title_forgot_password">Forgot Password</string>
+    <string name="title_change_password">Change Password</string>
+    <string name="title_change_faq">FAQ</string>
+    <string name="title_reward">Rewards &#38; Offers</string>
+    <string name="title_earn">Earn Points</string>
+</resources>

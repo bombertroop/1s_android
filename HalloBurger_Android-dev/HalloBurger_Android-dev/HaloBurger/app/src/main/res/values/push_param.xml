@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="push_notification_key">389484218706</string>
+    <string name="push_notification_tag">Halo Burger Message</string>
+    <string name="push_notification_id">1234</string>
+    <string name="push_notification_message">packageName.push.message</string>
+    <string name="push_notification_class">packageName.push.classname</string>
+</resources>

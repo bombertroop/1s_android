@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Halo Burger</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="signuptermstext">By clicking the \"Sign up\" or \"Sign in\" buttons above</string>
+    <string name="signuptermstext2">you are indicating that you have read and agree</string>
+    <string name="signuptermstext3">to the</string>
+    <string name="terms"><u>Terms of Use</u></string>
+    <string name="sep"> and </string>
+    <string name="privacy"><u>Privacy Policy</u>.</string>
+    <string name="returningusers">RETURNING USERS</string>
+
+
+    <string name="promoenter">Please enter promo code</string>
+    <string name="promoCase">Case-sensitive no spaces please.</string>
+    <string name="promocode">Promo Code</string>
+    <string name="promoDescription">Code not working?</string>
+    <string name="promoContact"><u>Contact us</u>.</string>
+
+    <string name="signupheader">Please confirm that your email is  </string>
+    <string name="signupmessages">. \n\nWe will use this email to let you know when you have earned rewards.</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="facebook_app_id">1480776538829625</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

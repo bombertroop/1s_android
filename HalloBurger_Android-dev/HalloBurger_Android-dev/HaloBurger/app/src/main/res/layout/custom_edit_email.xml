@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/formfield" >
+
+    <EditText
+        android:id="@+id/edit_custom_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edit_text_style"
+        android:ellipsize="start"
+        android:gravity="center_vertical"
+        android:hint="@string/edit_email"
+        android:inputType="textEmailAddress"
+        android:maxLength="200"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="12dp" />
+
+    <ImageView
+        android:id="@+id/edit_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:padding="15dp"
+        android:src="@drawable/x_edit" />
+
+</RelativeLayout>

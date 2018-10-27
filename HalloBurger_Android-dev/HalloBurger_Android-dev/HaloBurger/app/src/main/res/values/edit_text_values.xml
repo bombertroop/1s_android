@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="edit_email">Email or Username</string>
+    <string name="edit_from">From Name (Optional)</string>
+    <string name="edit_message">Custom Message (Optional)</string>
+    <string name="edit_password">Password</string>
+    <string name="edit_password_sign_up">Password (Min. 6 characters)</string>
+    <string name="edit_first_name">First Name (Min. 2 characters)</string>
+    <string name="edit_last_name">Last Name (Min. 2 characters)</string>
+    <string name="edit_phone_number">Phone Number</string>
+    <string name="edit_password_hint">Password Hint (Optional)</string>
+    <string name="edit_phone_number2">Phone Number</string>
+    <string name="edit_security_qs">Security Question</string>
+    <string name="edit_security_aw">Security Answer</string>
+    <string name="edit_card_number">Card Number</string>
+    <string name="edit_manage_payment_date">MM/YYYY</string>
+    <string name="edit_payment_type_hint">Payment Type</string>
+    <string name="edit_confirm_email">Email</string>
+    <string name="edit_old_password">Old Password</string>
+    <string name="edit_new_password">New Password (Min 6 characters)</string>
+    <string name="edit_confirm_password">Confirm Password</string>
+    <string name="edit_new_security_qs">New Security Question</string>
+    <string name="edit_new_security_aw">New Security Answer</string>
+    <string name="edit_zip_code">Zip Code</string>
+    <string name="text_dob">Birthday (Optional)</string>
+</resources>

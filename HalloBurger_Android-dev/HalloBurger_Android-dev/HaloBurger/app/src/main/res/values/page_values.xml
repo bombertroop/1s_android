@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Home Page-->
+
+    <string name="earnpoint">Earn Points</string>
+    <string name="viewrewards">Rewards</string>
+    <string name="referafriend">Refer a Friend</string>
+    <string name="socialize">Social Feed</string>
+    <!--/Home Page-->
+
+    <!-- About Us Page -->
+    <string name="aboutus_line1">Halo Burger is one of the oldest hamburger chains in the United States and originated in Flint, MI way back in 1923. Originally called Kewpee, the company served its first hamburger out of a \"boxcar\" style wagon on Harrison St. in Downtown flint.</string>
+    <string name="aboutus_line2">There, we created the world\'s first \"deluxe\" hamburger, made with 100&#37; fresh, never-frozen beef, pressed on a searing hot grill to give it just the right amount of char. Then we top it with fresh cut tomatoes, lettuce and mayonnaise. That\'s one deluxe burger&#33;</string>
+    <!-- /About Us Page -->
+
+    <!-- Info Page-->
+    <string name="abouthalo">About Halo Burger</string>
+    <string name="locations">Locations</string>
+    <string name="howitworks">How to Get Rewards</string>
+    <string name="Back">Back</string>
+    <string name="faqinfo">FAQ</string>
+    <string name="faq">FREQUENTLY ASKED QUESTIONS</string>
+    <string name="contactus">Contact Us</string>
+    <string name="menuinfo">Menu</string>
+    <string name="nutrition_calculator">NUTRITION CALCULATOR</string>
+    <string name="LOGOUT">Log out</string>
+    <string name="LOGIN">Log in</string>
+    <string name="ChangePassword">Change password</string>
+    <string name="promocodeinfo">Promo Code</string>
+    <!-- /Info Page-->
+
+    <!-- Snap Start -->
+    <string name="howtogetrewards">How to Get Rewards</string>
+
+    <string name="orderfood_title">ORDER FOOD</string>
+    <string name="scancode_title">SCAN CODE</string>
+    <string name="earnrewards_title">EARN REWARDS</string>
+    <string name="orderfood">Get ready to enjoy a delicious meal at Halo Burger.</string>
+    <string name="scancode">Scan your barcode at the register before you pay or tell the cashier the code below the barcode to earn rewards for your purchase.</string>
+    <string name="earnrewards">Get points for every purchase and earn great rewards like free food.</string>
+
+    <!-- /Snap Start -->
+
+    <!-- Sign Up Start -->
+    <string name="optionemailoffers">Opt-in for email offers from us!</string>
+    <!-- /Sign Up Start -->
+
+    <!-- Reward Start -->
+    <string name="rewardpoints">Reward Points:   </string>
+    <string name="showcshier">Please present this or read the code to your cashier at time of purchase.</string>
+    <!-- /Reward Start -->
+
+    <!-- Tutorial Start -->
+    <string name="barcode_scan_text">Scan your barcode at the register (before you pay!) or tell your cashier the code below the barcode to earn points for your purchase.</string>
+    <!-- /Tutorial Start -->
+
+    <string name="barcode_scan_guide">Scan your code at the register or read the code to your cashier when you make a purchase to earn points.</string>
+
+    <string name="takehome">TAKE HOME TUB</string>
+</resources>

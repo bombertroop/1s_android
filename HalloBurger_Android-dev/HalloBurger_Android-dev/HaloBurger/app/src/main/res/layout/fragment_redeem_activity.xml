@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/viewactivity_linear_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_topbar"
+        android:layout_marginTop="0dp"
+        android:gravity="center_horizontal"
+        android:padding="0dp" >
+
+        <TextView
+            android:id="@+id/viewactivity_text_activity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/activity_btn_active"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/viewactivity_text_claimed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/claimed_btn_active"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/viewactivity_linear_settings"
+        android:layout_margin="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/viewactivity_text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <TextView
+            android:id="@+id/viewactivity_text_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <ImageView
+            android:id="@+id/viewactivity_text_inserlinepoints"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewactivity_text_points"
+            android:background="@drawable/line_info_pg"
+            android:gravity="center" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/viewactivity_text_inserlinepoints"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

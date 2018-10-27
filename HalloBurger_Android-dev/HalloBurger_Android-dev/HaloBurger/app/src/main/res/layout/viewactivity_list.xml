@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:background="#0fff"
+    android:padding="0dp" >
+
+    <TextView
+        android:id="@+id/viewactivity_list_text_date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dip"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/viewactivity_list_text_date"
+        android:gravity="right"
+        android:layout_alignParentRight="true" >
+
+        <TextView
+            android:id="@+id/viewactivity_list_text_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:background="@drawable/activity_help"
+            android:layout_gravity="center_vertical"
+            android:padding="0dp" />
+
+        <TextView
+            android:id="@+id/viewactivity_list_text_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:gravity="right"
+            android:maxLines="2"
+            android:lineSpacingExtra="2dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+<!--             android:text="@string/Back" -->
+    </LinearLayout>
+
+</RelativeLayout>

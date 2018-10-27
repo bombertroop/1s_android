@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/tab_home"
+        android:enabled="true"
+        android:title="@null"/>
+
+    <item
+        android:id="@+id/navigation_rewards"
+        android:icon="@drawable/rewards"
+        android:title="@null"/>
+
+
+    <item
+        android:id="@+id/navigation_earn"
+        android:title="@null"
+        android:icon="@drawable/snap" />
+
+    <item
+        android:id="@+id/navigation_feed"
+        android:title="@null"
+        android:icon="@drawable/social" />
+
+    <item
+        android:id="@+id/navigation_info"
+        android:title="@null"
+        android:icon="@drawable/info" />
+
+
+
+</menu>

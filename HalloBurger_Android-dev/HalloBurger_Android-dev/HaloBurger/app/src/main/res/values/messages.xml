@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="constant_title_message">1S</string>
+    <string name="error_401_services">Please login with different id</string>
+    <string name="error_location_services">Please Turn On Location Services (in Settings) to allow Halo Burger to reward you!</string>
+    <string name="error_network_services">Could not connect to server, please check your network connection</string>
+    <string name="error_goal_complete">Mark this goal as complete?</string>
+    <string name="error_failed_api">We are sorry! Something went wrong. Please try again. If problem persists, contact customer support from the info section of the app for further assistance.</string>
+
+</resources>
