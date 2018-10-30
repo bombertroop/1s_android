@@ -2,6 +2,7 @@ package com.ak.app.haloburger.activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -25,6 +26,7 @@ import com.ak.app.haloburger.api.LogInResponse;
 import com.ak.app.haloburger.custom.ui.AlertDialogs;
 import com.ak.app.haloburger.custom.ui.CustomProgressDialog;
 import com.ak.app.haloburger.ui.auth.LoginFragment;
+import com.ak.app.haloburger.ui.deliveryorder.ReceiveDO;
 import com.ak.app.haloburger.util.AppHelper;
 import com.ak.app.haloburger.util.MyTypeface;
 import com.ak.app.haloburger.util.Tabbar;
@@ -32,6 +34,8 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.facebook.CallbackManager;
+
+import org.json.JSONException;
 
 public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -122,6 +126,7 @@ public class Main2Activity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        toggle.setDrawerIndicatorEnabled(false);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -131,6 +136,23 @@ public class Main2Activity extends AppCompatActivity
 
         if (savedInstanceState == null) {
             setDisplayView(0);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+        if(resultCode==1)
+        {
+            String code = data.getStringExtra("barcode");
+            ReceiveDO.getInstance().setCode(code);
+            try {
+                ReceiveDO.getInstance().fetchingData();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
 

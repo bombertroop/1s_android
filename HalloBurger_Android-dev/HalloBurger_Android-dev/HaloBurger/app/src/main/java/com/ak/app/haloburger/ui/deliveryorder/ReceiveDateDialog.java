@@ -30,6 +30,7 @@ import com.ak.app.haloburger.custom.ui.AlertDialogs;
 import com.ak.app.haloburger.custom.ui.CustomEditText;
 import com.ak.app.haloburger.util.AppHelper;
 import com.ak.app.haloburger.util.MyTypeface;
+import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,7 +47,7 @@ public class ReceiveDateDialog extends Fragment  implements FragmentInitial, Vie
     private String mParamDoNumber;
     private String mParamId;
     private static final String DO_NUMBER = "DO_NUMBER";
-    private static final String ID = "DO_NUMBER";
+    private static final String ID = "ID";
 
     private Main2Activity mActivity;
     private EditText editCode;
@@ -55,9 +56,9 @@ public class ReceiveDateDialog extends Fragment  implements FragmentInitial, Vie
     private FetchDataAdapter fetchDataAdapter;
     private RequirementFieldAdapter RFAdapter;
     private View rootView;
-//    private ReceiveDoResponse mReceiveDOResponse;
+    private ReceiveDoResponse mReceiveDOResponse;
     private Calendar myCalendar = Calendar.getInstance();
-
+    private DeliveryOrderResponse mDeliveryOrder;
 
 
     public ReceiveDateDialog(){}
@@ -65,6 +66,9 @@ public class ReceiveDateDialog extends Fragment  implements FragmentInitial, Vie
     public static ReceiveDateDialog newInstance(DeliveryOrderResponse mDeliveryOrder) {
         ReceiveDateDialog fragment = new ReceiveDateDialog();
         Bundle args = new Bundle();
+
+
+
         args.putString(DO_NUMBER, mDeliveryOrder.getDelivaryOrderNumber());
         args.putString(ID, mDeliveryOrder.getId());
         fragment.setArguments(args);
@@ -77,6 +81,8 @@ public class ReceiveDateDialog extends Fragment  implements FragmentInitial, Vie
         if (getArguments() != null) {
             mParamDoNumber = getArguments().getString(DO_NUMBER);
             mParamId= getArguments().getString(ID);
+
+
         }
 
     }
@@ -167,11 +173,18 @@ public class ReceiveDateDialog extends Fragment  implements FragmentInitial, Vie
 
     @Override
     public void processFinish(JSONObject response) {
-        Log.i("elang","elang response: "+response);
-//        AlertDialogs.showMsgDialog(
-//                    getResources().getString(R.string.constant_title_message),
-//                    mReceiveDOResponse.getMessage(), mActivity);
-        mActivity.getSupportFragmentManager().popBackStack();
+        final Gson gson = new Gson();
+
+        mReceiveDOResponse = gson.fromJson(String.valueOf(response), ReceiveDoResponse.class);
+
+        AlertDialogs.showMsgDialog(
+                    getResources().getString(R.string.constant_title_message),
+                    mReceiveDOResponse.getMessage(), mActivity);
+
+        if(mReceiveDOResponse.getStatus()){
+            mActivity.getSupportFragmentManager().popBackStack();
+        }
+
     }
 
     @Override
@@ -182,7 +195,7 @@ public class ReceiveDateDialog extends Fragment  implements FragmentInitial, Vie
         btnEnter = rootView.findViewById(R.id.btn_enter);
         editCode = rootView.findViewById(R.id.edit_code);
         txtInstruction = rootView.findViewById(R.id.txt_instruction);
-        editCode.setHint("DO number");
+        editCode.setHint("Receive Date");
         txtInstruction.setText("Receive "+mParamDoNumber);
 
 

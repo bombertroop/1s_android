@@ -106,6 +106,8 @@ public class HomeFragment extends Fragment implements FragmentInitial, View.OnCl
         btnStockMutation.setOnClickListener(this);
         btnLogOut.setOnClickListener(this);
         btnDoList.setOnClickListener(this);
+
+        btnStockMutation.setVisibility(View.GONE);
     }
 
     @Override
