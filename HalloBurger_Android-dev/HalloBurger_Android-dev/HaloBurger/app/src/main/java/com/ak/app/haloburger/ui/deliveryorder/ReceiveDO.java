@@ -1,5 +1,6 @@
 package com.ak.app.haloburger.ui.deliveryorder;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -28,6 +30,7 @@ import com.google.gson.Gson;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Calendar;
 import java.util.HashMap;
 
 
@@ -40,6 +43,7 @@ public class ReceiveDO extends Fragment implements FragmentInitial, View.OnClick
     private RequirementFieldAdapter RFAdapter;
     private View rootView;
     private ReceiveDoResponse mReceiveDOResponse;
+    private Calendar myCalendar = Calendar.getInstance();
 
     public ReceiveDO() {
         // Required empty public constructor
@@ -77,7 +81,7 @@ public class ReceiveDO extends Fragment implements FragmentInitial, View.OnClick
         headers.put("do_number", code);
         String serviceUrl = "/shipments/search_do?do_number="+code;
         fetchDataAdapter.requestGET(serviceUrl,"shipments", headers);
-        txtInstruction.setText(authToken);
+//        txtInstruction.setText(authToken);
     }
 
     @Override
@@ -98,14 +102,16 @@ public class ReceiveDO extends Fragment implements FragmentInitial, View.OnClick
     public void processFinish(JSONObject response) {
 
         final Gson gson = new Gson();
+//        {"status":true,"delivery_order":{"id":37,"delivery_order_number":"CNTRSJ10180007"}}
 
         mReceiveDOResponse = gson.fromJson(String.valueOf(response), ReceiveDoResponse.class);
-
-        if (mReceiveDOResponse.getStatus().equals("true") || mReceiveDOResponse.getStatus() != null || !mReceiveDOResponse.getStatus().equals("")){
+//        mActivity.setDisplayView(new ReceiveDateDialog().newInstance(editCode.getEditText().getText().toString()), true);
+        if (mReceiveDOResponse.getStatus()){
+            mActivity.setDisplayView(new ReceiveDateDialog().newInstance(mReceiveDOResponse.getDeliveryOrder()), true);
+        }else{
             AlertDialogs.showMsgDialog(
                     getResources().getString(R.string.constant_title_message),
                     mReceiveDOResponse.getMessage(), mActivity);
-        }else{
 
         }
 

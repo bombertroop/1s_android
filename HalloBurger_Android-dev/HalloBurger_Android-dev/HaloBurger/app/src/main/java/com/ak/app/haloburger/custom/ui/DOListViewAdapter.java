@@ -16,6 +16,9 @@ import com.ak.app.haloburger.api.DoListResponse;
 import com.ak.app.haloburger.util.AppHelper;
 import com.ak.app.haloburger.util.MyTypeface;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -67,8 +70,12 @@ public class DOListViewAdapter extends RecyclerView.Adapter<DOListViewAdapter.My
         DeliveryOrder mDeliveryOrder = doList.get(position);
         holder.textDoNumberTitle.setText(mDeliveryOrder.getDeliveryOrderNumber());
         try {
-            holder.textDeleveryDate.setText(AppHelper.makeDate(mDeliveryOrder.getDeliveryDate()));
-            holder.textReceivedDate.setText(AppHelper.makeDate(mDeliveryOrder.getDeliveryDate()));
+
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy");
+
+
+            holder.textDeleveryDate.setText(remakeDate(mDeliveryOrder.getDeliveryDate()));
+            holder.textReceivedDate.setText(remakeDate(mDeliveryOrder.getReceivedDate()));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -76,6 +83,19 @@ public class DOListViewAdapter extends RecyclerView.Adapter<DOListViewAdapter.My
 
 
 
+    }
+
+    private String remakeDate(String dateString){
+        DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd");
+        DateFormat outputFormat = new SimpleDateFormat("dd MMM yyyy");
+        String inputDateStr=dateString;
+        Date date = null;
+        try {
+            date = inputFormat.parse(inputDateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return outputFormat.format(date);
     }
 
     @Override

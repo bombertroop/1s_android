@@ -90,39 +90,39 @@ public class RewardViewAdapter extends RecyclerView.Adapter<RewardViewAdapter.My
             mReward.setExpirestate("reward");
             try {
                 if (points.equals("0")) {
-                    holder.cellParent
-                            .setBackgroundResource(R.drawable.rewards_btn_1);
-                    String deadline = mReward.getExpiryDate();
-                    java.util.Date d1 = AppHelper.makeDate(deadline);
-                    SimpleDateFormat curFormater = new SimpleDateFormat(
-                            "MM/dd/yy");// "MM-dd-yy"
-                    String currentTime = curFormater.format(d1);
-                    holder.dateText.setText("Expires " + currentTime);
-                    holder.dateText.setVisibility(View.VISIBLE);
-                    holder.dateTextView.setText("FREE");
-
-                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) holder.dateTextView
-                            .getLayoutParams();
-                    params.setMargins(0, 15, 15, 0); // substitute
-                    // parameters
-                    // for
-                    // left,
-                    // top,
-                    // right,
-                    // bottom
-                    holder.dateTextView.setLayoutParams(params);
-                    // dateTextView.setGravity(Gravity.CENTER);
-
-                    LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) holder.dateText
-                            .getLayoutParams();
-                    params2.setMargins(0, 0, 0, 5); // substitute
-                    // parameters
-                    // for
-                    // left,
-                    // top,
-                    // right,
-                    // bottom
-                    holder.dateText.setLayoutParams(params2);
+//                    holder.cellParent
+//                            .setBackgroundResource(R.drawable.rewards_btn_1);
+//                    String deadline = mReward.getExpiryDate();
+//                    java.util.Date d1 = AppHelper.makeDate(deadline);
+//                    SimpleDateFormat curFormater = new SimpleDateFormat(
+//                            "MM/dd/yy");// "MM-dd-yy"
+//                    String currentTime = curFormater.format(d1);
+//                    holder.dateText.setText("Expires " + currentTime);
+//                    holder.dateText.setVisibility(View.VISIBLE);
+//                    holder.dateTextView.setText("FREE");
+//
+//                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) holder.dateTextView
+//                            .getLayoutParams();
+//                    params.setMargins(0, 15, 15, 0); // substitute
+//                    // parameters
+//                    // for
+//                    // left,
+//                    // top,
+//                    // right,
+//                    // bottom
+//                    holder.dateTextView.setLayoutParams(params);
+//                    // dateTextView.setGravity(Gravity.CENTER);
+//
+//                    LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) holder.dateText
+//                            .getLayoutParams();
+//                    params2.setMargins(0, 0, 0, 5); // substitute
+//                    // parameters
+//                    // for
+//                    // left,
+//                    // top,
+//                    // right,
+//                    // bottom
+//                    holder.dateText.setLayoutParams(params2);
                     // dateText.setGravity(Gravity.CENTER);
 
                 } else {
@@ -140,23 +140,23 @@ public class RewardViewAdapter extends RecyclerView.Adapter<RewardViewAdapter.My
                     // bottom
                     holder.dateTextView.setLayoutParams(params);
 
-                    String deadline = mReward.getExpiryDate();
-                    java.util.Date d1 = AppHelper.makeDate(deadline);
-                    SimpleDateFormat curFormater = new SimpleDateFormat(
-                            "MM/dd/yy");// "MM-dd-yy"
-                    String currentTime = curFormater.format(d1);
-                    holder.dateText.setText("Expires " + currentTime);
-                    holder.dateText.setVisibility(View.VISIBLE);
-                    LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) holder.dateText
-                            .getLayoutParams();
-                    params2.setMargins(0, 0, 0, 5); // substitute
-                    // parameters
+//                    String deadline = mReward.getExpiryDate();
+//                    java.util.Date d1 = AppHelper.makeDate(deadline);
+//                    SimpleDateFormat curFormater = new SimpleDateFormat(
+//                            "MM/dd/yy");// "MM-dd-yy"
+//                    String currentTime = curFormater.format(d1);
+//                    holder.dateText.setText("Expires " + currentTime);
+//                    holder.dateText.setVisibility(View.VISIBLE);
+//                    LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) holder.dateText
+//                            .getLayoutParams();
+//                    params2.setMargins(0, 0, 0, 5); // substitute
+//                    // parameters
                     // for
                     // left,
                     // top,
                     // right,
                     // bottom
-                    holder.dateText.setLayoutParams(params2);
+//                    holder.dateText.setLayoutParams(params2);
 
 
                 }
