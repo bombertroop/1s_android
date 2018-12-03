@@ -25,8 +25,11 @@ import android.widget.TextView;
 import com.ak.app.haloburger.api.LogInResponse;
 import com.ak.app.haloburger.custom.ui.AlertDialogs;
 import com.ak.app.haloburger.custom.ui.CustomProgressDialog;
+import com.ak.app.haloburger.model.EventSales;
+import com.ak.app.haloburger.model.Product;
 import com.ak.app.haloburger.ui.auth.LoginFragment;
 import com.ak.app.haloburger.ui.deliveryorder.ReceiveDO;
+import com.ak.app.haloburger.ui.sales.TransactionListFragment;
 import com.ak.app.haloburger.util.AppHelper;
 import com.ak.app.haloburger.util.MyTypeface;
 import com.ak.app.haloburger.util.Tabbar;
@@ -36,6 +39,9 @@ import com.android.volley.toolbox.Volley;
 import com.facebook.CallbackManager;
 
 import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -70,6 +76,8 @@ public class Main2Activity extends AppCompatActivity
     private void initCtrl() {
         mActivity = this;
         mTabbar = new Tabbar();
+        createSalesModel();
+        addProductList();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
         callbackManager = CallbackManager.Factory.create();
@@ -153,6 +161,10 @@ public class Main2Activity extends AppCompatActivity
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+        } else if (resultCode == 2 ){
+
+            String code = data.getStringExtra("barcode");
+            TransactionListFragment.getInstance().addItem(code);
         }
     }
 
@@ -382,5 +394,78 @@ public class Main2Activity extends AppCompatActivity
 
     public SharedPreferences.Editor getPreferenceEditor() {
         return prefsEditor;
+    }
+
+
+    private List<EventSales> eventSalesLlist = new ArrayList<>();
+
+    public List<Product> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
+    }
+
+    private List<Product> productList = new ArrayList<>();
+
+    public List<EventSales> getEventSalesLlist() {
+        return eventSalesLlist;
+    }
+
+    public void setEventSalesLlist(List<EventSales> eventSalesLlist) {
+        this.eventSalesLlist = eventSalesLlist;
+    }
+
+    private void addEventList(){
+        EventSales eventSales1 = new EventSales();
+        eventSales1.setName("CNTRVNTPTST1");
+        eventSales1.setDetail("25.0% + 25.0%");
+        eventSales1.setDisc((float) 0.25);
+        eventSalesLlist.add(eventSales1);
+
+        EventSales eventSales2 = new EventSales();
+        eventSales2.setName("CNTRVNTPTST2");
+        eventSales2.setDetail("25.0% + 25.0%");
+        eventSales2.setDisc((float) 0.25);
+        eventSalesLlist.add(eventSales2);
+    }
+
+    private void addProductList(){
+        Product p1 = new Product();
+        p1.setBarcode("129044");
+        p1.setProductName("FL00001-10LADBC - FLADEO");
+        p1.setColor("DBC - DARK BLACK");
+        p1.setSize("40");
+        p1.setPrice(399000);
+        productList.add(p1);
+
+        Product p2 = new Product();
+        p2.setBarcode("129043");
+        p2.setProductName("FL00001-10LADBC - FLADEO");
+        p2.setColor("DBC - DARK BLACK");
+        p2.setSize("39");
+        p2.setPrice(399000);
+        productList.add(p2);
+
+        Product p3 = new Product();
+        p3.setBarcode("129042");
+        p3.setProductName("FL00001-10LADBC - FLADEO");
+        p3.setColor("DBC - DARK BLACK");
+        p3.setSize("38");
+        p3.setPrice(399000);
+        productList.add(p3);
+
+        Product p4 = new Product();
+        p4.setBarcode("129040");
+        p4.setProductName("FL00001-10LADBC - FLADEO");
+        p4.setColor("DBC - DARK BLACK");
+        p4.setSize("36");
+        p4.setPrice(399000);
+        productList.add(p4);
+    }
+
+    public void createSalesModel(){
+        addEventList();
     }
 }

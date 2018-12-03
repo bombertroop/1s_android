@@ -1,6 +1,7 @@
 package com.ak.app.haloburger.ui;
 
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.support.v4.app.Fragment;
@@ -19,23 +20,21 @@ import com.ak.app.haloburger.adapter.FragmentInitial;
 import com.ak.app.haloburger.api.LogInResponse;
 import com.ak.app.haloburger.custom.ui.AlertDialogs;
 import com.ak.app.haloburger.ui.auth.LoginFragment;
-import com.ak.app.haloburger.ui.auth.MainSignupFragment;
 import com.ak.app.haloburger.ui.deliveryorder.ReceiveDO;
 import com.ak.app.haloburger.ui.deliveryorder.ReceivedDOList;
-import com.ak.app.haloburger.ui.info.LocationFragment;
+import com.ak.app.haloburger.ui.sales.NewSalesFragment;
 import com.ak.app.haloburger.ui.stockmutation.ReceiveSM;
 import com.ak.app.haloburger.util.MyTypeface;
 import com.google.gson.Gson;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 
 public class HomeFragment extends Fragment implements FragmentInitial, View.OnClickListener, FetchDataAdapter.AsyncResponse{
 
     private Main2Activity mActivity;
-    private TextView textDo, textStockMutaion, textLogout, textDoList;
-    private RelativeLayout btnDo, btnStockMutation, btnLogOut, btnDoList;
+    private TextView textDo, textStockMutaion, textLogout, textDoList, textSales;
+    private RelativeLayout btnDo, btnStockMutation, btnLogOut, btnDoList, btnSales;
     private View rootView;
 
 
@@ -82,11 +81,13 @@ public class HomeFragment extends Fragment implements FragmentInitial, View.OnCl
         textStockMutaion = rootView.findViewById(R.id.text_stock_mutation_button);
         textLogout = rootView.findViewById(R.id.text_logout_button);
         textDoList = rootView.findViewById(R.id.text_do_list_btn);
+        textSales = rootView.findViewById(R.id.text_sales_button);
 
         btnDo =  rootView
                 .findViewById(R.id.btn_do);
         btnStockMutation =  rootView
                 .findViewById(R.id.btn_stock_mutation);
+        btnSales = rootView.findViewById(R.id.btn_sales);
         btnLogOut = rootView.findViewById(R.id.btn_logout);
         btnDoList = rootView.findViewById(R.id.btn_do_list);
 
@@ -106,6 +107,7 @@ public class HomeFragment extends Fragment implements FragmentInitial, View.OnCl
         btnStockMutation.setOnClickListener(this);
         btnLogOut.setOnClickListener(this);
         btnDoList.setOnClickListener(this);
+        btnSales.setOnClickListener(this);
 
         btnStockMutation.setVisibility(View.GONE);
     }
@@ -122,6 +124,7 @@ public class HomeFragment extends Fragment implements FragmentInitial, View.OnCl
         MyTypeface.setButtonFont(textStockMutaion, mActivity);
         MyTypeface.setButtonFont(textLogout, mActivity);
         MyTypeface.setButtonFont(textDoList, mActivity);
+        MyTypeface.setButtonFont(textSales, mActivity);
     }
 
     @Override
@@ -136,6 +139,9 @@ public class HomeFragment extends Fragment implements FragmentInitial, View.OnCl
                 break;
             case R.id.btn_do_list:
                 mActivity.setDisplayView(new ReceivedDOList(), true);
+                break;
+            case R.id.btn_sales:
+                mActivity.setDisplayView(new NewSalesFragment(), true);
                 break;
             case R.id.btn_logout:
                 Log.i("elang","elang trace 1");

@@ -62,8 +62,30 @@
             android:text="STOCK MUTATION"/>
     </RelativeLayout>
 
+
+
     <RelativeLayout
         android:layout_below="@+id/btn_stock_mutation"
+        android:id="@+id/btn_sales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button" >
+
+        <TextView
+            android:id="@+id/text_sales_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:text="SALES"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/btn_sales"
         android:id="@+id/btn_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -79,7 +101,7 @@
             android:layout_margin="15dp"
             android:layout_centerInParent="true"
             android:textColor="#ffffff"
-            android:text="STOCK MUTATION"/>
+            android:text="LOG IN"/>
     </RelativeLayout>
 
 

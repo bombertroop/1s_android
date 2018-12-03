@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Halo Burger</string>
+    <string name="app_name">1S</string>
 
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -38,5 +38,6 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_zbar">ZBarActivity</string>
+    <string name="title_activity_sales">SalesActivity</string>
 
 </resources>

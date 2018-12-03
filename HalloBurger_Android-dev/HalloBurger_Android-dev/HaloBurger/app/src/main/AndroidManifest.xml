@@ -25,9 +25,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/icon72"
+        android:icon="@drawable/icon1s"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/icon72"
+        android:roundIcon="@drawable/icon1s"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -90,7 +90,12 @@
         <activity
             android:name=".ZBarActivity"
             android:label="@string/title_activity_zbar"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ZBarActivity2"
+            android:label="@string/title_activity_zbar"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

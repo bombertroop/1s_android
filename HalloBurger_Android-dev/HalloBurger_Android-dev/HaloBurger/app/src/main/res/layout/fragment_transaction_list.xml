@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+
+        <com.ak.app.haloburger.custom.ui.CustomEditText
+            android:id="@+id/edit_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/btn_enter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button">
+                <TextView
+                    android:id="@+id/txt_enter_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_centerInParent="true"
+                    android:textColor="#ffffff"
+                    android:text="ENTER"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_scan"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button">
+                <TextView
+                    android:id="@+id/txt_scan_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_centerInParent="true"
+                    android:textColor="#ffffff"
+                    android:text="SCAN PRODUCT"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_margin="10dp"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layout_top"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_create"
+        android:scrollbars="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/btn_create"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#000000">
+        <TextView
+            android:id="@+id/txt_create_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:text="TOTAL"/>
+    </RelativeLayout>
+
+</RelativeLayout>
